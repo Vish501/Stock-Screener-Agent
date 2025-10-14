@@ -28,10 +28,18 @@ def main():
         "artifacts/fundamentals/.gitkeep",
         "artifacts/sentiment/.gitkeep",
         "artifacts/embeddings/.gitkeep",
-        "artifacts/cache_index.json",       
+        "artifacts/cache_index.json",
+        "artifacts/benchmarks/.gitkeep",
+        "params/thresholds.yaml",
+        "config/config.yaml"       
         "pyproject.toml",
         "requirements.txt",
-        "research/.gitkeep"
+        "research/.gitkeep",
+        "app/main.py",
+        "app/componets/chat_window.py",
+        "app/utils/memory.py",
+        "app/utils/prompts.py",
+        "app/utils/formatters.py",
     ]
 
     # Iterate through each file path
