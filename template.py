@@ -6,24 +6,26 @@ from pathlib import Path
 def main():
     logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 
+    src_file_name = "StockScreener"
+
     # List of files and directories that need to be created or amended with new files
     list_of_files = [
-        "src/StockScreener/__init__.py",
-        "src/StockScreener/utils/__init__.py",
-        "src/StockScreener/utils/common.py",
-        "src/StockScreener/utils/logger.py",
-        "src/StockScreener/core/__init__.py",
-        "src/StockScreener/core/graph/__init__.py",
-        "src/StockScreener/core/graph/stock_screener_graph.py",
-        "src/StockScreener/core/graph/nodes/__init__.py",
-        "src/StockScreener/core/agents/__init__.py",
-        "src/StockScreener/core/llm/__init__.py",
-        "src/StockScreener/core/scoring/__init__.py",
-        "src/StockScreener/core/retrieval/__init__.py",
-        "src/StockScreener/core/data/__init__.py",
-        "src/StockScreener/core/prompts/.gitkeep",
-        "src/StockScreener/utils/__init__.py",
-        "src/StockScreener/pipelines/__init__.py",
+        f"src/{src_file_name}/__init__.py",
+        f"src/{src_file_name}/utils/__init__.py",
+        f"src/{src_file_name}/utils/common.py",
+        f"src/{src_file_name}/utils/logger.py",
+        f"src/{src_file_name}/core/__init__.py",
+        f"src/{src_file_name}/core/graph/__init__.py",
+        f"src/{src_file_name}/core/graph/stock_screener_graph.py",
+        f"src/{src_file_name}/core/graph/nodes/__init__.py",
+        f"src/{src_file_name}/core/agents/__init__.py",
+        f"src/{src_file_name}/core/llm/__init__.py",
+        f"src/{src_file_name}/core/scoring/__init__.py",
+        f"src/{src_file_name}/core/retrieval/__init__.py",
+        f"src/{src_file_name}/core/data/__init__.py",
+        f"src/{src_file_name}/core/prompts/.gitkeep",
+        f"src/{src_file_name}/utils/__init__.py",
+        f"src/{src_file_name}/pipelines/__init__.py",
         "artifacts/prices/.gitkeep",
         "artifacts/fundamentals/.gitkeep",
         "artifacts/sentiment/.gitkeep",
@@ -31,7 +33,7 @@ def main():
         "artifacts/cache_index.json",
         "artifacts/benchmarks/.gitkeep",
         "params/thresholds.yaml",
-        "config/config.yaml"       
+        "config/config.yaml",
         "pyproject.toml",
         "requirements.txt",
         "research/.gitkeep",
@@ -40,6 +42,15 @@ def main():
         "app/utils/memory.py",
         "app/utils/prompts.py",
         "app/utils/formatters.py",
+        f"src/{src_file_name}/core/data/cache_manager.py",
+        f"src/{src_file_name}/core/data/data_loader.py",
+        f"src/{src_file_name}/core/data/feature_engineer.py",
+        f"src/{src_file_name}/core/data/schemas.py",
+        f"src/{src_file_name}/pipelines/fetch_prices.py",           # Fetch from Yahoo/AlphaVantage
+        f"src/{src_file_name}/pipelines/fetch_fundamentals.py",     # Financial ratios and balance sheets
+        f"src/{src_file_name}/pipelines/fetch_sentiment.py",        # NewsAPI, Reddit, or Twitter fetch
+        f"src/{src_file_name}/pipelines/fetch_benchmarks.py",       # Runs all fetchers and updates cache_index.json
+        f"src/{src_file_name}/pipelines/update_cache.py",           # Optional cron-like update orchestration
     ]
 
     # Iterate through each file path
