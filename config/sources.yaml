@@ -1,0 +1,18 @@
+prices:
+  source: "yfinance"
+  interval: "1d"
+  lookback_days: 365
+
+fundamentals:
+  source: "yahoo_fin"
+  fields: ["PE", "ROE", "EPS", "DebtToEquity", "RevenueGrowth"]
+
+sentiment:
+  news_api: "NEWS_API_KEY"
+  reddit: true
+  twitter: false
+
+benchmarks:
+  sectors: ["Technology", "Healthcare", "Finance"]
+  metrics: ["PE", "ROE", "Volatility"]
+  
