@@ -1,0 +1,13 @@
+market: SPY
+sectors:
+  Communication Services: XLC
+  Consumer Discretionary: XLY
+  Consumer Staples: XLP
+  Energy: XLE
+  Financials: XLF
+  Health Care: XLV
+  Industrials: XLI
+  Materials: XLB
+  Real Estate: XLRE
+  Technology: XLK
+  Utilities: XLU
