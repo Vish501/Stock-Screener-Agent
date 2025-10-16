@@ -21,6 +21,8 @@ if (Test-Path $envFile) {
 
                 # Use Set-Item for dynamic env variable
                 Set-Item -Path "Env:$name" -Value $value
+
+                Write-Host "Set $name"
             }
         }
     }
