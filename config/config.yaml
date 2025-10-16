@@ -1,0 +1,5 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  cache_path = artifacts/cache_index.json
+  cache_expiry_hours = 6
