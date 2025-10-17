@@ -1,6 +1,7 @@
 .vscode
 todo.md
 artifacts/
+logs
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
