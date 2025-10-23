@@ -2,6 +2,7 @@
 todo.md
 artifacts/
 logs
+.venv311
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
